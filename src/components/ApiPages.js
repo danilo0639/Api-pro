@@ -16,7 +16,8 @@ import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
-import {useQuery,} from '@tanstack/react-query'
+import {useQuery,} from '@tanstack/react-query';
+import { Link } from "react-router-dom";
 
 function TablePaginationActions(props) {
   const theme = useTheme();
@@ -129,7 +130,7 @@ export default function CustomPaginationActionsTable() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
 
-              <TableCell align="left">{data.API}</TableCell>
+              <TableCell align="left"><Link to={data.API} style={{ textDecoration:"none", color:"black" }}>{data.API}</Link></TableCell>
               <TableCell align="left">{data.Category}</TableCell>
               <TableCell align="left">{data.Description}</TableCell>
               <TableCell align="left">{data.Link}</TableCell>
